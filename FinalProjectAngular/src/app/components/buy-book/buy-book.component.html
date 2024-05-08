@@ -1,0 +1,19 @@
+<form>
+  <form  class="form-inline" #orderForm="ngForm"
+  (ngSubmit)="createTransactionAndPlaceOrder(orderForm)">
+
+      <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="payment.address" required>
+      </div>
+      <div>
+        <label for="mobileNo">Mobile No:</label>
+        <input type="text" id="mobileNo" name="mobileNo" [(ngModel)]="payment.mobileNo" required>
+      </div>
+      
+      <button type="submit">Place Order</button>
+      
+      
+      
+        <!-- <Button (click)="makePayment()"> Make Payment</Button> -->
+        </form>

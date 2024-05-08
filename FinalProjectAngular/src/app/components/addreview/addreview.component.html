@@ -1,0 +1,16 @@
+<form>
+    <form class="form-inline">
+        <h1>Add Reviews</h1>
+        <div>
+            <label for="userEmail">Name:</label>
+            <input type="text" id="userName" name="userName" [(ngModel)]="review.userName" required>
+
+        </div>
+
+        <div>
+            <label for="review">Review:</label>
+            <input type="text" id="review" name="review" [(ngModel)]="review.review" required>
+        </div>
+        <Button (click)="addReview()">Submit</Button> 
+    
+</form>

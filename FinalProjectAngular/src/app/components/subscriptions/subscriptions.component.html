@@ -1,0 +1,44 @@
+<div class="search-container">
+    <label for="bookName" class="search-label">Search Book:</label>
+    <input type="text" id="search" [(ngModel)]="bookName">
+    <button (click)="getSubscriptionsByBookName(bookName)" class="search-input">View Subscriptions</button>
+    <button (click)="getAllSubscriptions()" class="search-input">Get all Subscriptions</button>
+  </div>
+  
+<div *ngIf="subscriptions" class="container">
+    <h2 id="header">Subscriptions</h2>
+    <table id="customer">
+        <thead>
+            <tr>
+                <th>Subscription ID</th>
+                <th>Subscription Date</th>
+                <th>Expire Date</th>
+                <th>Cost</th>
+                <th>Status</th>
+                <th>Payment Plan</th>
+                <th>Customer</th>
+                <th>Book</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let subscription of subscriptions">
+                <td>{{ subscription.subscriptionId }}</td>
+                <td>{{ subscription.subscriptionDate }}</td>
+                <td>{{ subscription.expireDate }}</td>
+                <td>{{ subscription.subscriptionCost }}</td>
+                <td>{{ subscription.subscriptionStatus }}</td>
+                <td>{{ subscription.paymentPlan }}</td>
+                <td>{{ subscription.customer?.userName }}</td>
+                <td>{{ subscription.book?.bookTitle }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+        
+    
+
+
+<div *ngIf="!subscriptions" class="container">
+    <h4>No subscriptions found.</h4>
+</div>
+

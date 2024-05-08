@@ -1,0 +1,56 @@
+
+<div >
+    <div class="search-container">
+        <label for="search" class="search-label">Search Book:</label>
+        <input type="text" id="search" name="search" [(ngModel)]="query" class="search-input">
+    </div>
+
+    
+    <h1 id="header">Available Books</h1>
+    <div class="category-container">
+        <label for="category" class="category-label">Category:</label>
+        <select id="category" name="category" [(ngModel)]="bookStock.book.bookCategory" required class="category-select">
+            <option value="FICTION">Fiction</option>
+            <option value="HORROR">Horror</option>
+            <option value="SCIFI">Sci-Fi</option>
+            <option value="CHILDREN">Children</option>
+            <option value="FANTASY">Fantasy</option>
+            <option value="BIOGRAPHY">Biography</option>
+            <option value="COMICS">Comics</option>
+        </select>
+        <button (click)="searchByCategory(bookStock.book.bookCategory!)" class="form-button">Filter</button>
+        <button (click)="getAllBooks()" class="form-button">Clear filter</button>
+    </div>
+<h4 *ngIf="bookStockArr.length<1">
+    No Books found! </h4>
+
+<table id="customer" *ngIf="bookStockArr.length>0">
+    <thead>
+        <th>Sl no</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Link</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bk of bookStockArr| searchBookStock : query">
+            <td>{{bk.bookStockId}}</td>
+            <td> <img src="{{bk.book.image}}" alt=""> </td>
+            <td>{{bk.book.bookTitle}}</td>
+            <td>{{bk.book.bookAuthor}}</td>
+            <td><a href="{{bk.book.pdfLink}}"> Book Link</a> </td>
+            <td>{{bk.book.price}}</td>
+            <td>{{bk.book.bookCategory}}</td>
+            <td>{{bk.stockQuantity}} </td>
+            <td> <button (click)="updateBook(bk)" >Edit Book</button></td>
+            <td> <button (click)="deleteBook(bk.bookStockId)">Delete Book</button></td>
+           </tr>
+    </tbody>
+    
+</table>
+</div>

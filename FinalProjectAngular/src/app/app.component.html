@@ -1,0 +1,84 @@
+<div>
+    <nav>
+        <ul>
+            <li class="logo">
+                <img class="img" [src]="imageUrl" height="70px" width="85px" alt="logo">
+            </li>
+            <!-- <li *ngIf="isUserLogedIn()">
+                <a routerLink='home' 
+                 routerLinkActive="active">Home</a>
+            </li>
+            <li *ngIf="isUserLogedIn()"> 
+                <a routerLink='cart' 
+                 routerLinkActive="active">Cart</a>
+            </li>
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='orders' 
+                 routerLinkActive="active">Orders</a>
+            </li>
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='subscriptions-view' 
+                 routerLinkActive="active">Subscriptions</a>
+            </li> -->
+           
+            <li>
+                <a routerLink='login' routerLinkActive="active">Login</a>
+            </li>
+            <li *ngIf="isAdminLogedIn()">
+                <a routerLink='admincrud' 
+                 routerLinkActive="active">Admin</a>
+            </li>
+            <li *ngIf="isAdminLogedIn()">
+                <a routerLink='add-book' 
+                 routerLinkActive="active">Add book</a>
+            </li>
+            <li *ngIf="isAdminLogedIn()">
+                <a routerLink='less-stocks' 
+                 routerLinkActive="active">Less Stocks</a>
+            </li>
+            <li *ngIf="isAdminLogedIn()">
+                <a routerLink='update-status' 
+                 routerLinkActive="active">Orders</a>
+            </li>
+            <li *ngIf="isAdminLogedIn()">
+                <a routerLink='subscriptions' 
+                 routerLinkActive="active">Subscriptions</a>
+            </li>
+           
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='profile' 
+                 routerLinkActive="active">Profile</a>
+            </li>
+           
+
+
+         
+
+
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='subscriptions-view' 
+                 routerLinkActive="active">Subscriptions</a>
+            </li>
+
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='orders' 
+                 routerLinkActive="active">Orders</a>
+            </li>
+            <li *ngIf="isUserLogedIn()"> 
+                <a routerLink='cart' 
+                 routerLinkActive="active">Cart</a>
+            </li>
+            <li *ngIf="isUserLogedIn()">
+                <a routerLink='home' 
+                 routerLinkActive="active">Home</a>
+            </li>
+
+         
+        </ul>
+    </nav>
+
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

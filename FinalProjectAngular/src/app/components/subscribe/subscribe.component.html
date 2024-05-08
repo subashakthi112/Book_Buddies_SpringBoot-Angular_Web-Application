@@ -1,0 +1,29 @@
+<div *ngIf="subscriptionPlans && subscriptionPlans.length > 0" class="container">
+    <h2 id="header"> Available Subscription Plans</h2>
+  <table id="customer">
+      <thead>
+          <tr>
+              
+              <th>Name</th>
+              <th>Duration(days)</th>
+              <th>Cost(Rs)</th>
+              <th>Select</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let plan of subscriptionPlans">
+              
+              <td>{{ plan.name }}</td>
+              <td>{{ plan.duration }}</td>
+              <td>{{ plan.cost }}</td>
+              <td>
+                  <button (click)="selectPlan(plan)" class="form-button">Select</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+<div *ngIf="!subscriptionPlans || subscriptionPlans.length === 0" class="container">
+  <h4>No subscription plans available.</h4>
+</div>

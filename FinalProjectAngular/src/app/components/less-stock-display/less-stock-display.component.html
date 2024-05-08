@@ -1,0 +1,30 @@
+
+<div >
+   
+<h4 *ngIf="bookStockArr.length<1">
+    No Books found! </h4>
+
+<table id="customer" *ngIf="bookStockArr.length>0">
+    <thead>
+        <th>Sl no</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let bk of bookStockArr">
+            <td>{{bk.book.bookId}}</td>
+            <td>{{bk.book.bookTitle}}</td>
+            <td>{{bk.book.bookAuthor}}</td>
+            <td>{{bk.book.price}}</td>
+            <td>{{bk.book.bookCategory}}</td>
+            <td>{{bk.stockQuantity}} </td>
+      
+           </tr>
+    </tbody>
+  
+</table>
+</div>

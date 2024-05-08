@@ -1,0 +1,18 @@
+
+r
+java:S3655Y"PCall "customer.isPresent()" or "!customer.isEmpty()" before accessing the value.(‚ª‰ûÿÿÿÿ8Ú‡¸·ã1
+]	java:S125"<This block of commented-out lines of code should be removed.(Ë‚»Ôûÿÿÿÿ8Û‡¸·ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Û‡¸·ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Û‡¸·ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Û‡¸·ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Û‡¸·ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Û‡¸·ã1
+k
+java:S1128"IRemove this unused import 'com.ford.bookbuddies.exception.BookException'.(ñ”é½ıÿÿÿÿ8Êáõç1
+s
+java:S1128"QRemove this unused import 'com.ford.bookbuddies.exception.StockManagerException'.(‹àáûÿÿÿÿ8Êáõç1

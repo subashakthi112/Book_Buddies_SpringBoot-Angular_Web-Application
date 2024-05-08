@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-12" *ngIf="!isAdminLogin">
+    <div class="login-container">
+      <form class="login-form" #loginForm="ngForm">
+        <h1>User Login</h1>
+        <p>Please login to your account</p>
+        <div class="input-group">
+          <input type="text" id="email" name="email" placeholder="email" [(ngModel)]="login.email" #emailRef="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+          <div *ngIf="emailRef.invalid && (emailRef.touched || emailRef.dirty)">
+            <p *ngIf="emailRef.errors?.['required']" class="text-danger">Email is required, cant be blank.</p>
+            <p *ngIf="emailRef.errors?.['pattern']" class="text-danger">Please enter a valid email</p>     
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="login.password"  #passRef="ngModel" required>
+          <div *ngIf="passRef.invalid && (passRef.touched || passRef.dirty)">
+            <p *ngIf="passRef.errors?.['required']" class="text-danger">Password is required, cant be blank.</p>
+          </div>
+        </div>
+        <button type="submit" (click)="onUserLogin()" [disabled]="!loginForm.valid" >Login</button>
+        <div class="bottom-text">
+          <p>Don't have an account? <a (click)="signIn()">Sign Up</a></p>
+          <p><a (click)="openAdminLogin()">Admin Login?</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-12" *ngIf="isAdminLogin">
+    <div class="login-container">
+      <form class="login-form">
+        <h1>Admin Login</h1>
+        <p>Please login to your account</p>
+        <div class="input-group">
+          <input type="text" id="email" name="name" placeholder="name" [(ngModel)]="adminLogin.name" #nameRef="ngModel" required>
+          <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
+            <p *ngIf="nameRef.errors?.['required']" class="text-danger">Name is required, cant be blank.</p>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="adminLogin.password" #passRef="ngModel" required>
+          <div *ngIf="passRef.invalid && (passRef.touched || passRef.dirty)">
+            <p *ngIf="passRef.errors?.['required']" class="text-danger">Password is required, cant be blank.</p>
+          </div>
+        </div>
+        <button type="submit" (click)="onAdminLogin()"  >Login</button>
+        <div class="bottom-text">
+         
+          <p><a (click)="closeAdminLogin()">User Login?</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

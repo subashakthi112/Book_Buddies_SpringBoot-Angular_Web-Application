@@ -1,0 +1,45 @@
+
+<div class="body">
+    <div class="user-info">
+    <h2>Name: {{bookModel.bookTitle}}</h2>
+    <h4>Author: {{bookModel.bookAuthor}}</h4>
+    <h4>Category: {{bookModel.bookCategory}}</h4>
+    <h4>Price: Rs. {{bookModel.price}}</h4>
+    <td class="img" > <img src="{{bookModel.image}}" alt=""> </td>
+    <br>
+    <label for="quantity">Quantity:</label>
+    <input class="search-container" type="text" id="quantity" name="quantity" [(ngModel)]="quantity"/>
+   <button id="button" (click)="addBookToCart()">Add To Cart</button> 
+   <p></p>
+            <button id="button" class="buy" (click)="buyNow()">Buy Now</button>
+            <button id="button" (click)="subscribeToBook()" >Subscribe</button>
+    
+    <div>
+        <br><br>
+    <h2>REVIEWS</h2>
+      
+            <table id="customer" *ngIf="reviewList.length>0">
+                <thead>
+                    <th>Name</th>
+                    <th>Review</th>
+                  
+                   
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rv of reviewList">
+                        <td>{{rv.userName}}</td>
+                        <td class="para">{{rv.review}}</td>
+                        <Button id="button-b" *ngIf="rv.userId == id" (click)="updateReview(rv)">Edit</Button>
+                        <Button id="button-b" *ngIf="rv.userId == id" (click)="deleteReviewById(rv.reviewId)">Delete</Button>
+                  
+                    </tr>
+                </tbody>
+           
+            </table>
+            <h4 *ngIf="reviewList.length<=0">No Reviews for this book</h4>
+       
+
+    
+    </div>
+</div>
+</div>

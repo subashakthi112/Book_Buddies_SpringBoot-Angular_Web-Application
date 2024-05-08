@@ -1,0 +1,43 @@
+<div *ngIf="subscriptions" class="container">
+    <h2 id="header">Subscriptions</h2>
+    <table id="customer">
+        <thead>
+            <tr>
+                <th>Subscription ID</th>
+                <th>Subscription Date</th>
+                <th>Expire Date</th>
+                <th>Cost</th>
+                <th>Status</th>
+                <th>Payment Plan</th>
+                <th>Book</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let subscription of subscriptions">
+                <td>{{ subscription.subscriptionId }}</td>
+                <td>{{ subscription.subscriptionDate }}</td>
+                <td>{{ subscription.expireDate }}</td>
+                <td>{{ subscription.subscriptionCost }}</td>
+                <td>{{ subscription.subscriptionStatus }}</td>
+                <td>{{ subscription.paymentPlan }}</td>
+                <td>{{ subscription.book?.bookTitle }}</td>
+                <td><button (click)="viewEbook(subscription.book?.bookId)">View Book</button></td>
+                <td><button (click)="renewSubscription(subscription.subscriptionId)" class="form-button">Renew</button></td>
+                <td><button (click)="extendSubscription(subscription.subscriptionId)" class="form-button">Extend</button></td>
+                
+                
+                  
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="!subscriptions" class="container">
+    <h4>No subscriptions found.</h4>
+</div>
+
+
+

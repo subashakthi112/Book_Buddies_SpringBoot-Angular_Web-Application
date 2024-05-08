@@ -1,0 +1,28 @@
+<div>
+    <h3 id="header">ORDER</h3>
+<h4 *ngIf="bookDetails.length<1">
+    No Books found! </h4>
+
+<table id="customer" *ngIf="bookDetails.length>0">
+    <thead>
+        <th>BookId</th>
+        <th>BookName</th>
+        <th>BookAuthor</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th *ngIf="user == 'user'">Add Review</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bookDetail of bookDetails">
+            <td>{{bookDetail.book?.bookId}}</td>
+            <td>{{bookDetail.book?.bookTitle}}</td>
+            <td>{{bookDetail.book?.bookAuthor}}</td>
+            <td>{{bookDetail.book?.bookCategory}}</td>
+            <td>{{bookDetail.book?.price}}</td>
+            <td>{{bookDetail.quantity}}</td>
+            <td *ngIf="user == 'user'"><Button (click)="addReview(bookDetail.book?.bookId)">Review</Button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

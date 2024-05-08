@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+div {
+    /* background-color: rgb(206, 206, 201); */
+}
+
+h1, h3 {
+    background-color:teal;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }

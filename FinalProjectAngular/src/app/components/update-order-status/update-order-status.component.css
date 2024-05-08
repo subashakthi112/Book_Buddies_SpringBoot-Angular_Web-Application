@@ -1,0 +1,36 @@
+#customer {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customer td, #customer th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #customer tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customer tr:hover {background-color: #ddd;}
+  
+  #customer th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: teal;
+    color: white;
+  }
+  #header{
+    text-align: center;
+    background-color: teal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  button{
+    background-color:bisque;
+    border-radius: 10px;
+    margin-top:5px;
+  }
+  button:hover{
+    background-color: white;
+  }

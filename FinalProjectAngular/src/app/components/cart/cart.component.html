@@ -1,0 +1,66 @@
+<div>
+    <h3 id="header">Books In Cart</h3>
+<h4 *ngIf="bookDetails.length<1">
+    No Books in Cart! </h4>
+
+<table id="customers" *ngIf="bookDetails.length>0">
+    <thead>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th></th>
+        <th>Quantity</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bd of bookDetails">
+            <td>{{bd.book?.bookTitle}}</td>
+            <td>{{bd.book?.bookAuthor}}</td>
+            <td>{{bd.book?.price}}</td>
+            <td>{{bd.book?.bookCategory}}</td>
+            <td><button type="button" id="quantity" (click)="increaseQuantity(bd.book?.bookId)">+</button></td>
+            <td>{{bd.quantity}}</td>
+            <td><button type="button" id="quantity" (click)="decreaseQuantity(bd.book?.bookId)">-</button></td>
+            <td><button type="button" id="delete" (click)="deleteFromCart(bd.book?.bookId)">DELETE</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td colspan="4"><strong>Total Cost:</strong></td>
+            <td colspan="4">{{cost}}</td>
+        </tr>
+    </tbody>
+    <button id="buy" (click)="buyAll(cost)">Buy</button>
+
+    <!-- <tbody>
+        <table>
+            <tr *ngFor="let bd of bookDetails">
+             
+              <td>{{ bd.quantity }}</td>
+              <td>{{ bd.book?.price || 0 }}</td>
+              <td>{{ (bd.book?.price || 0) * (bd.quantity || 0) }}</td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Total Cost:</strong></td>
+              <td>
+                {{ bookDetails.reduce((total, bd) => total + ((bd.book?.price || 0) * (bd.quantity || 0)), 0) }}
+
+              </td>
+            </tr>
+          </table>
+    </tbody> -->
+  
+    <!-- <button id="buy" (click)="buyFromCart()">Buy</button>  -->
+
+</table>
+</div>
+<!-- var i : number = 1;
+
+for(var i : number = 1; i <= 5; i++)  
+ {
+   console.log("Iteration no till now: " + i);
+   i++;
+ } -->

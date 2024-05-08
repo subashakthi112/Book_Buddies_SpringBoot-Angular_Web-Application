@@ -1,0 +1,31 @@
+
+š
+java:S1192/"xDefine a constant instead of duplicating this literal "Available Stock quantity is lesser than quantity needed" 3 times.(«È‘Ôıÿÿÿÿ8Ùà•Úå1
+o
+java:S36553"RCall "bookStock.isPresent()" or "!bookStock.isEmpty()" before accessing the value.(º˜Ü8åà•Úå1
+o
+java:S3655F"RCall "bookStock.isPresent()" or "!bookStock.isEmpty()" before accessing the value.(º˜Ü8ŞÜşúå1
+m
+java:S3655."PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÑÏñ8åà•Úå1
+t
+java:S3655/"RCall "bookStock.isPresent()" or "!bookStock.isEmpty()" before accessing the value.(«È‘Ôıÿÿÿÿ8åà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+_
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8æà•Úå1
+M
+java:S1611."0Remove the parentheses around the "bd" parameter(ÑÏñ8èà•Úå1
+i
+java:S1128"GRemove this unused import 'com.ford.bookbuddies.dto.ConfirmedBooksDto'.(»à¸øÿÿÿÿ8şÜşúå1

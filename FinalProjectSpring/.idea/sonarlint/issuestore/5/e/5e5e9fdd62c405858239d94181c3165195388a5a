@@ -1,0 +1,10 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(É‹Û‡8Ùªè®Ê1
+X	java:S125	"<This block of commented-out lines of code should be removed.(∏Î÷ﬂ8ˆªè®Ê1
+X	java:S125"<This block of commented-out lines of code should be removed.(¨Ë≠∞8ˆªè®Ê1
+i
+java:S1128"GRemove this unused import 'com.ford.bookbuddies.dto.ConfirmedBooksDto'.(ªÅ‡∏¯ˇˇˇˇ8ˇ›Ü⁄Â1
+i
+java:S1128"LRemove this unused import 'com.ford.bookbuddies.exception.PaymentException'.(÷¢ñ€8◊¯ÕŸÂ1
+s
+java:S1128"QRemove this unused import 'com.ford.bookbuddies.exception.SubscriptionException'.(ÂÕ˛ñ˛ˇˇˇˇ8◊¯ÕŸÂ1

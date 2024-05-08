@@ -1,0 +1,44 @@
+<!-- <p>add-book works!</p>
+{{bookStock | json}} -->
+    <form >
+  
+      <!-- <div>
+        <label for="author">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="bookStock.book.bookTitle" required>
+      </div> -->
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" [(ngModel)]="bookStock.book.bookAuthor" required>
+        </div>
+        <div>
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" [(ngModel)]="bookStock.book.price" required>
+        </div>
+        <div>
+          <label for="category">Category:</label>
+          <select id="category" name="category" [(ngModel)]="bookStock.book.bookCategory" required>
+            <option value="FICTION">Fiction</option>
+            <option value="HORROR">Horror</option>
+            <option value="SCIFI">Sci-Fi</option>
+            <option value="CHILDREN">Children</option>
+            <option value="FANTASY">Fantasy</option>
+            <option value="BIOGRAPHY">Biography</option>
+            <option value="COMICS">Comics</option>
+            <!-- Add other categories as needed -->
+              </select>
+        </div>
+        <div>
+          <label for="stockQuantity">Stock Quantity:</label>
+          <input type="number" id="stockQuantity" [(ngModel)]="bookStock.stockQuantity"  name="stockQuantity">
+          </div>
+          <div>
+            <label for="title">Link</label>
+            <input type="text" id="title" name="title" [(ngModel)]="bookStock.book.pdfLink" required>
+          </div>
+          <div>
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image" [(ngModel)]="bookStock.book.image" required>
+          </div>
+          <Button (click)="updateBook()"> Submit</Button>
+          </form>
+      

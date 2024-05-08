@@ -1,0 +1,8 @@
+
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8óëÊ¦æ1
+W	java:S125 "<This block of commented-out lines of code should be removed.(ç…ÊL8öëÊ¦æ1
+a
+java:S1128"?Remove this unused import 'com.ford.bookbuddies.dto.ReviewDto'.(¢°§üùÿÿÿÿ8ñò®Óç1
+k
+java:S1128"IRemove this unused import 'com.ford.bookbuddies.exception.BookException'.(ñ”é½ıÿÿÿÿ8ñò®Óç1

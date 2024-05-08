@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-12" >
+    <div class="login-container">
+      <form class="login-form" #userForm="ngForm">
+        <h1>User SignUp</h1>
+        <p>Please enter ur details below</p>
+        <div class="input-group">
+          <label >Name: </label>
+          <input type="text" id="name" name="name" placeholder="name" [(ngModel)]="user.name"  #nameRef="ngModel" pattern="[A-Za-z ]{3,}" required>
+          <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
+            <p *ngIf="nameRef.errors?.['required']" class="text-danger">Name is required, cant be blank.</p>
+            <p *ngIf="nameRef.errors?.['pattern']" class="text-danger">Only chars are allowed,Min 3 char required.</p>
+          </div>
+        </div>
+        <div class="input-group">
+          <label >Username: </label>
+          <input type="text" id="userName" name="userName" placeholder="userName" [(ngModel)]="user.userName" #usernameRef="ngModel" pattern="[A-Za-z ]{3,}" required>
+          <div *ngIf="usernameRef.invalid && (usernameRef.touched || usernameRef.dirty)">
+            <p *ngIf="usernameRef.errors?.['required']" class="text-danger">UserName is required, cant be blank.</p>
+            <p *ngIf="usernameRef.errors?.['pattern']" class="text-danger">Only chars are allowed,Min 3 char required.</p>
+          </div>
+        </div>
+        <div class="input-group">
+          <label >Phone number: </label>
+          <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Mobile number" [(ngModel)]="user.phoneNumber" #phoneRef="ngModel" pattern="[0-9]{10,10}" required>
+          <div *ngIf="phoneRef.invalid && (phoneRef.touched || phoneRef.dirty)">
+            <p *ngIf="phoneRef.errors?.['required']" class="text-danger">Phone Number is required, cant be blank.</p>
+            <p *ngIf="phoneRef.errors?.['pattern']" class="text-danger">Phone number should be of 10 digits</p>     
+          </div>
+        </div>
+        <div class="input-group">
+          <label >email: </label>
+          <input type="text" id="email" name="email" placeholder="email" [(ngModel)]="user.email" #emailRef="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+          <div *ngIf="emailRef.invalid && (emailRef.touched || emailRef.dirty)">
+            <p *ngIf="emailRef.errors?.['required']" class="text-danger">Email is required, cant be blank.</p>
+            <p *ngIf="emailRef.errors?.['pattern']" class="text-danger">Please enter a valid email</p>     
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="">Password: </label>
+          <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="user.password" #passRef="ngModel" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
+          <div *ngIf="passRef.invalid && (passRef.touched || passRef.dirty)">
+            <p *ngIf="passRef.errors?.['required']" class="text-danger">Password is required, cant be blank.</p>
+            <p *ngIf="passRef.errors?.['pattern']" class="text-danger">Password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long</p>     
+          </div>
+        </div>
+        <button type="submit" (click)="onUserSignIn()" [disabled]="!userForm.valid">Register</button>
+   
+      </form>
+    </div>
+  </div>
+
+  

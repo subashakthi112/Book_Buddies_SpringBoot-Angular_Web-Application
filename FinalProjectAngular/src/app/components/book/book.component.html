@@ -1,0 +1,45 @@
+<div>
+    <div class="search-container">
+        <label for="search" class="search-label">Search Book:</label>
+        <input type="text" id="search" name="search" [(ngModel)]="query" class="search-input">
+    </div>
+
+    <h3 id="header">Available Books</h3>
+    <div class="category-container">
+        <label for="category" class="category-label">Category:</label>
+        <select id="category" name="category" [(ngModel)]="book.bookCategory" required class="category-select">
+            <option value="FICTION">Fiction</option>
+            <option value="HORROR">Horror</option>
+            <option value="SCIFI">Sci-Fi</option>
+            <option value="CHILDREN">Children</option>
+            <option value="FANTASY">Fantasy</option>
+            <option value="BIOGRAPHY">Biography</option>
+            <option value="COMICS">Comics</option>
+        </select>
+        <button (click)="searchByCategory(book.bookCategory!)" class="form-button">Filter</button>
+        <button (click)="getAllBooks()" class="form-button">Clear Filter</button>
+    </div>
+<h4 *ngIf="books.length<1">
+    No Books found! </h4>
+
+<table id="customer" *ngIf="books.length>0">
+    <thead>
+        <th>Sl no</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Category</th>
+       <th>View Books</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let bk of books | searchBook : query">
+            <td>{{bk.bookId}}</td>
+            <td> <img src="{{bk.image}}" alt=""> </td>
+            <td>{{bk.bookTitle}}</td>
+            <td>{{bk.bookCategory}}</td>
+            <td><button (click)="viewBook(bk)">View</button></td> 
+        </tr>
+    </tbody>
+    
+</table>
+</div>

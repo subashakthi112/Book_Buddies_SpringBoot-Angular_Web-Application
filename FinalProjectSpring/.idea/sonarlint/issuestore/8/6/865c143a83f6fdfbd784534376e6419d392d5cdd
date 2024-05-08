@@ -1,0 +1,38 @@
+
+L
+java:S10660"/Merge this if statement with the enclosing one.(­Ş‘8Ğ™óÙå1
+r
+java:S3655B"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ï¢ğ¡üÿÿÿÿ8Ø™óÙå1
+r
+java:S3655Q"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ï¢ğ¡üÿÿÿÿ8Ø™óÙå1
+t
+java:S3655D"RCall "bookStock.isPresent()" or "!bookStock.isEmpty()" before accessing the value.(ç´îüüÿÿÿÿ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+_
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ø™óÙå1
+R
+java:S1611B"0Remove the parentheses around the "bd" parameter(ï¢ğ¡üÿÿÿÿ8İ™óÙå1
+R
+java:S1611Q"0Remove the parentheses around the "bd" parameter(ï¢ğ¡üÿÿÿÿ8ß™óÙå1
+i
+java:S1128"GRemove this unused import 'com.ford.bookbuddies.dto.ConfirmedBooksDto'.(»à¸øÿÿÿÿ8¢×şúå1
+l
+java:S1128
+"JRemove this unused import 'com.ford.bookbuddies.exception.OrderException'.(½ß÷­şÿÿÿÿ8¢×şúå1
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8¢×şúå1

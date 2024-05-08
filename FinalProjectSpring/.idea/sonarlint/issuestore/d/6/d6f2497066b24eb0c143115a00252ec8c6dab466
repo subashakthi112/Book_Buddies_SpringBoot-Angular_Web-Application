@@ -1,0 +1,8 @@
+
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¡²õË
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(£š’Ë
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ž¦ïÕ
+o
+java:S1128"MRemove this unused import 'com.ford.bookbuddies.exception.CustomerException'.(‘³­­úÿÿÿÿ8÷º´·ã1
+g
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ8÷º´·ã1

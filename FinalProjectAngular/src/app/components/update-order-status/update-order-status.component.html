@@ -1,0 +1,32 @@
+<div>
+    <h3 id="header">ORDER HISTORY</h3>
+<h4 *ngIf="orders.length<1">
+    No Orders found! </h4>
+
+<table id="customer" *ngIf="orders.length>0">
+    <thead>
+        <th>Sl No</th>
+        <th>BookCount</th>
+        <th>Order Status</th>
+        <th>OrderDate</th>
+        <th>Address</th>
+        <th>Phone number</th>
+        <th>TotalCost</th>
+        <th></th>
+    </thead>
+    <!-- {{orders | json}} -->
+    <tbody>
+        <tr *ngFor="let bk of orders">
+            <td>{{bk.orderId}}</td>
+            <td>{{bk.totalBookCount}}</td>
+            <td>{{bk.orderStatus}}</td>
+            <td>{{bk.orderDate}}</td>
+            <td> {{bk.payment?.address}} </td>
+            <td> {{bk.payment?.mobileNo}} </td>
+            <td>{{bk.payment?.totalCost}}</td>
+            <button (click)="viewDetails(bk.confirmedOrders?.orderedBooks)">View</button>
+        </tr>
+    </tbody>
+    
+</table>
+</div>

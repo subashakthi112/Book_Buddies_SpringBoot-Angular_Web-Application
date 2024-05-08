@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-12" >
+      <div class="login-container">
+        <form class="login-form">
+          <h1>Edit user</h1>
+          <p>Please enter ur details below</p>
+          <div class="input-group">
+            <label >Name: </label>
+            <input type="text" id="name" name="name" placeholder="name" [(ngModel)]="user.name" required>
+          </div>
+          <div class="input-group">
+            <label >Username: </label>
+            <input type="text" id="userName" name="userName" placeholder="userName" [(ngModel)]="user.userName" required>
+          </div>
+          <div class="input-group">
+            <label >Phone number: </label>
+            <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Mobile number" [(ngModel)]="user.phoneNumber" required>
+          </div>
+          <div class="input-group">
+            <label >email: </label>
+            <input type="text" id="email" name="email" placeholder="email" [(ngModel)]="user.email" required>
+          </div>
+          <div class="input-group">
+            <label for="">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="user.password" required>
+          </div>
+          <button type="submit" (click)="onUpdate()">Update</button>
+          
+        </form>
+      </div>
+    </div>
+    
